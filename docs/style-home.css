@@ -101,23 +101,29 @@ main .personagens{
     align-items: center;
     justify-content: space-evenly;
     padding: 20px 0px;
+    position: relative;
 }
 main .personagens::before{
-    
-
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 15px;
+    top: 100%;
+    border-radius: 20px;
+    background-color: var(--cor2);
 }
 main .personagens h1{
     font-weight: bolder;
     font-size: 2.5em;
     color: var(--cor2);
 }
-main .personagens p{
+main .personagens .txt{
     font-size: 1.5em;
     width: 50%;
     color: white;
 }
-main .personagens button {
-    display: inline-block;
+main .personagens a button {
     padding: 3em 6em;
     font-size: 16px;
     font-weight: 700;
@@ -148,6 +154,66 @@ main .personagens button::before {
 main .personagens button:hover::before {
     transform: translateX(0);
 }
+main .mobs{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    position: relative;
+}
+main .mobs::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 15px;
+    top: 100%;
+    border-radius: 20px;
+    background-color: var(--cor2);
+}
+main .mobs h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: var(--cor2);
+}
+main .mobs .txt{
+    font-size: 1.5em;
+    width: 50%;
+    color: white;
+}
+main .mobs a button {
+    padding: 3em 6em;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border-image: linear-gradient(to right, var(--cor2), var(--cor1)) 1;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+main .mobs button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--cor2), var(--cor1));;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+main .mobs button:hover::before {
+    transform: translateX(0);
+}
+
 
 @media (max-width:1000px){
     .navbar{
