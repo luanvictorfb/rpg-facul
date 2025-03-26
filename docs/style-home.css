@@ -267,8 +267,8 @@ main .configuracoes button:hover::before {
 @media (max-width:1000px){
     .navbar{
         backdrop-filter: none;
+        
     }
-
     .navbar-container .navbar-menu{
         display: none;
         flex-direction: column;
