@@ -100,7 +100,7 @@ main .personagens{
     width: 90%;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px 0px;
+    padding: 100px 0px;
     position: relative;
 }
 main .personagens::before{
@@ -127,11 +127,11 @@ main .personagens a button {
     padding: 3em 6em;
     font-size: 16px;
     font-weight: 700;
-    color: white;
+    color: black;
     border-image: linear-gradient(to right, var(--cor2), var(--cor1)) 1;
     cursor: pointer;
     position: relative;
-    background-color: transparent;
+    background-color: #9E9C85;
     text-decoration: none;
     overflow: hidden;
     z-index: 1;
@@ -158,8 +158,8 @@ main .mobs{
     display: flex;
     width: 90%;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
+    justify-content: space-evenly;
+    padding: 100px 0px;
     position: relative;
 }
 main .mobs::before{
@@ -186,11 +186,11 @@ main .mobs a button {
     padding: 3em 6em;
     font-size: 16px;
     font-weight: 700;
-    color: white;
+    color: black;
     border-image: linear-gradient(to right, var(--cor2), var(--cor1)) 1;
     cursor: pointer;
     position: relative;
-    background-color: transparent;
+    background-color: #9E9C85;
     text-decoration: none;
     overflow: hidden;
     z-index: 1;
@@ -211,6 +211,55 @@ main .mobs button::before {
 }
 
 main .mobs button:hover::before {
+    transform: translateX(0);
+}
+main .configuracoes{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    position: relative;
+}
+main .configuracoes h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: var(--cor2);
+}
+main .configuracoes .txt{
+    font-size: 1.5em;
+    width: 50%;
+    color: white;
+}
+main .configuracoes a button {
+    padding: 3em 6em;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    border-image: linear-gradient(to right, var(--cor2), var(--cor1)) 1;
+    cursor: pointer;
+    position: relative;
+    background-color: #9E9C85;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+main .configuracoes button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--cor2), var(--cor1));;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+main .configuracoes button:hover::before {
     transform: translateX(0);
 }
 
@@ -256,7 +305,34 @@ main .mobs button:hover::before {
         width: 70%;
         gap: 3em;
     }
+    main .personagens h1{
+        text-align: center;
+    }
     main .personagens p{
+        width: 100%;
+    }
+    main .mobs{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 70%;
+        gap: 3em;
+    }
+    main .mobs h1{
+        text-align: center;
+    }
+    main .mobs p{
+        width: 100%;
+    }
+    main .configuracoes{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 70%;
+        gap: 3em;
+    }
+    main .configuracoes h1{
+        text-align: center;
+    }
+    main .configuracoes p{
         width: 100%;
     }
 }
@@ -270,5 +346,18 @@ main .mobs button:hover::before {
     .navbar-container .navbar-menu li a{
         font-size: 1.2em;
         padding: 3px 15px;
+    }
+    main .personagens{
+        width: 100%;
+        gap: 3em;
+    }
+    main .personagens h1{
+        font-size: 1.1em;
+        text-align: center;
+    }
+    main .personagens p{
+        font-size: 16px;
+        text-align: center;
+        width: 80%;
     }
 }
