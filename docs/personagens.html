@@ -22,25 +22,68 @@
                     <li><a href="#">Personagens</a></li>
                     <li><a href="#">Mobs</a></li>
                     <li><a href="#">Sobre</a></li>
-                </ul>
+                </ul>   
             </div>
         </nav>
     </header>
     <main>
-        <div class="formheader">
+        <div class="container-form">
             <form action="" method="post">
-                <div class="formheader-names">
-                    <label for="fnome">Nome do personagem</label>
-                    <input type="text" name="fnome" id="fnome" required>
-                    <label for="fnome">Nome do jogador</label>
-                    <input type="text" name="fnome" id="fnome" required>
+                <div class="formheader">
+                    <div class="formheader-names">
+                        <label for="inome-per">Nome do personagem</label>
+                        <input type="text" name="inome-per" id="inome" required>
+                        <label for="inome-jog">Nome do jogador</label>
+                        <input type="text" name="inome-jog" id="inome-jog" required>
+                    </div>
+                    <div class="formheader-clases">
+                        <label for="fclass">Classe / Nivel</label>
+                        <button><i class="fa-solid fa-plus"></i></button>
+                    </div>
                 </div>
-                <div class="formheader-class">
-                    <label for="fclass">Classe / Nivel</label>
-                    <button><i class="fa-solid fa-plus"></i></button>
+                <div class="formheader-2">
+                    <div class="status-row">
+                        <label for="iforca">Força</label>
+                        <input type="number" name="iforca" id="iforca">
+                    </div>
+                    <div class="status-row">
+                        <label for="idestreza">Destreza</label>
+                        <input type="number" name="idestreza" id="idestreza">
+                    </div>
+                    <div class="status-row">
+                        <label for="iconstituicao">Constituição</label>
+                        <input type="number" name="iconstituicao" id="iconstituicao">
+                    </div>
+                    <div class="status-row">
+                        <label for="iinteligencia">Inteligência</label>
+                        <input type="number" name="iinteligencia" id="iinteligencia">
+                    </div>
+                    <div class="status-row">
+                        <label for="isabedoria">Sabedoria</label>
+                        <input type="number" name="isabedoria" id="isabedoria">
+                    </div>
+                    <div class="status-row">
+                        <label for="icarisma">Carisma</label>
+                        <input type="number" name="icarisma" id="icarisma">
+                    </div>
                 </div>
+                <div class="asidemiddle-stats">
+                    <div class="asidestatus">
+                        <input type="number" name="iinspiracao" id="iinspiracao">
+                        <label for="iinspiracao">Inspiração</label>
+                    </div>
+                    <div class="asidestatus">
+                        <input type="number" name="iinspiracao" id="iinspiracao">
+                        <label for="iinspiracao">Bônus de proficiência</label>
+                    </div>
+                    <div class="asidestatus">
+                        <input type="number" name="iinspiracao" id="iinspiracao">
+                        <label for="iinspiracao">Sabedoria Passiva(Percepção)</label>
+                    </div>
+                    
+                </div>
+            </form>
         </div>
-    </form>
     </main>
 </body>
 <script src="navbar.js"></script>
