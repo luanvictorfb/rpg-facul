@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --cor1: #9E9C85;
+    --cor2:#333011;
+    --cor3:#5E5A38;
+    --cor4: #DED79E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins',serif;
+}
+body{
+    min-height: 100vh;
+    background-image: url(../imagens/pexels-pixabay-235985.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow:row nowrap;
+    width: 100%;
+    padding: 0 2rem;
+}
+.navbar-logo{
+    font-size: 2.2em;
+    font-weight: bolder;
+    color: var(--cor4);
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar-container .navbar-menu{
+    display: flex;
+    text-align: center;
+    gap: 30px;
+    list-style: none;
+    flex-shrink: 1;
+}
+.navbar-container .navbar-menu li a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 3px 10px;
+    transition: all .5s ease;
+    white-space: nowrap;
+    border: 2px solid transparent;
+}
+.navbar-container .navbar-menu li a:hover{
+    transform: scale(1.5);
+    color: white;
+    background-color: var(--cor2);
+    border: 2px solid var(--cor1);
+}
+.navbar-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--cor4);
+    transition: all 0.3s ease-in-out;
+}
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main .personagens{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    position: relative;
+}
+main .personagens::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 15px;
+    top: 100%;
+    border-radius: 20px;
+    background-color: var(--cor4);
+}
+main .personagens h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: var(--cor4);
+}
+main .personagens .txt{
+    font-size: 1.5em;
+    width: 50%;
+    color: white;
+}
+main .personagens a button {
+    padding: 3em 6em;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    border-image: linear-gradient(to right, var(--cor4), var(--cor1)) 1;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--cor1);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+main .personagens button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--cor4), var(--cor1));;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+main .personagens button:hover::before {
+    transform: translateX(0);
+}
+main .mobs{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    position: relative;
+}
+main .mobs::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 15px;
+    top: 100%;
+    border-radius: 20px;
+    background-color: var(--cor4);
+}
+main .mobs h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: var(--cor4);
+}
+main .mobs .txt{
+    font-size: 1.5em;
+    width: 50%;
+    color: white;
+}
+main .mobs a button {
+    padding: 3em 6em;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    border-image: linear-gradient(to right, var(--cor4), var(--cor1)) 1;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--cor1);
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+main .mobs button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--cor4), var(--cor1));;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+main .mobs button:hover::before {
+    transform: translateX(0);
+}
+main .configuracoes{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    position: relative;
+}
+main .configuracoes h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: var(--cor4);
+}
+main .configuracoes .txt{
+    font-size: 1.5em;
+    width: 50%;
+    color: white;
+}
+main .configuracoes a button {
+    padding: 3em 6em;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    border-image: linear-gradient(to right, var(--cor4), var(--cor1)) 1;
+    cursor: pointer;
+    position: relative;
+    background-color: #9E9C85;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+main .configuracoes button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--cor4), var(--cor1));;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+main .configuracoes button:hover::before {
+    transform: translateX(0);
+}
+
+
+@media (max-width:1000px){
+    .navbar{
+        backdrop-filter: none;
+        
+    }
+    .navbar-container .navbar-menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7em;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5em 1.5em;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    .navbar-container .navbar-menu.active{
+        display: flex;
+    }
+    .navbar-toggle{
+        display: block;
+        z-index: 999;
+    }
+    .navbar-toggle.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .navbar-toggle.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .navbar-toggle.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    main .personagens{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 70%;
+        gap: 3em;
+    }
+    main .personagens h1{
+        text-align: center;
+    }
+    main .personagens p{
+        width: 100%;
+    }
+    main .mobs{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 70%;
+        gap: 3em;
+    }
+    main .mobs h1{
+        text-align: center;
+    }
+    main .mobs p{
+        width: 100%;
+    }
+    main .configuracoes{
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 70%;
+        gap: 3em;
+    }
+    main .configuracoes h1{
+        text-align: center;
+    }
+    main .configuracoes p{
+        width: 100%;
+    }
+}
+@media (max-width:480px){
+    .navbar-container{
+        padding: 0 1em;
+    }
+    .navbar-logo{
+        font-size: 1.7em;
+    }
+    .navbar-container .navbar-menu li a{
+        font-size: 1.2em;
+        padding: 3px 15px;
+    }
+    main .personagens{
+        width: 100%;
+        gap: 3em;
+    }
+    main .personagens h1{
+        font-size: 1.1em;
+        text-align: center;
+    }
+    main .personagens p{
+        font-size: 16px;
+        text-align: center;
+        width: 80%;
+    }
+}
