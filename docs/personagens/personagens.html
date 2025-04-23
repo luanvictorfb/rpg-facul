@@ -31,48 +31,48 @@
         <div class="container-form">
             <form>
                 <fieldset class="main-info">
-                    <legend>Informações Gerais</legend>
-                    <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
-                    <label>Classe (Nível): <input type="text" name="classe_nivel" /></label>
-                    <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
-                    <label>Raça: <input type="text" name="raca" /></label>
-                    <label>Antecedente: <input type="text" name="antecedente" /></label>
-                    <label>Alinhamento: <input type="text" name="alinhamento" /></label>
-                    <label>XP: <input type="number" name="xp" min="0" /></label>
+                  <legend>Informações Gerais</legend>
+                  <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
+                  <label>Classe (Nível): <input type="text" name="classe_nivel" /></label>
+                  <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
+                  <label>Raça: <input type="text" name="raca" /></label>
+                  <label>Antecedente: <input type="text" name="antecedente" /></label>
+                  <label>Alinhamento: <input type="text" name="alinhamento" /></label>
+                  <label>XP: <input type="number" name="xp" min="0" /></label>
                 </fieldset>
             
                 <fieldset class="attributes">
-                    <legend>Atributos</legend>
-                    <label>Força: <input type="number" name="forca" min="0" /></label>
-                    <label>Destreza: <input type="number" name="destreza" min="0" /></label>
-                    <label>Constituição: <input type="number" name="constituicao" min="0" /></label>
-                    <label>Inteligência: <input type="number" name="inteligencia" min="0" /></label>
-                    <label>Sabedoria: <input type="number" name="sabedoria" min="0" /></label>
-                    <label>Carisma: <input type="number" name="carisma" min="0" /></label>
+                  <legend>Atributos</legend>
+                  <label>Força: <input type="number" name="forca" min="0" /></label>
+                  <label>Destreza: <input type="number" name="destreza" min="0" /></label>
+                  <label>Constituição: <input type="number" name="constituicao" min="0" /></label>
+                  <label>Inteligência: <input type="number" name="inteligencia" min="0" /></label>
+                  <label>Sabedoria: <input type="number" name="sabedoria" min="0" /></label>
+                  <label>Carisma: <input type="number" name="carisma" min="0" /></label>
                 </fieldset>
             
-                <fieldset>
-                    <legend>Bônus & Estado</legend>
-                    <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" /></label><br>
-                    <label>Iniciativa: <input type="number" name="iniciativa" /></label><br>
-                    <label>Deslocamento: <input type="text" name="deslocamento" /></label><br>
-                    <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" /> / <input type="number" name="hp_maximo" placeholder="Máximo" /></label>
+                <fieldset class="bonus-state">
+                  <legend>Bônus & Estado</legend>
+                  <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" /></label><br>
+                  <label>Iniciativa: <input type="number" name="iniciativa" /></label><br>
+                  <label>Deslocamento: <input type="text" name="deslocamento" /></label><br>
+                  <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" /> / <input type="number" name="hp_maximo" placeholder="Máximo" /></label>
                 </fieldset>
             
                 
                 <fieldset class="saving-throws">
-                    <legend>Testes de Resistência</legend>
-                    <div class="save-item"><input type="checkbox" name="save_forca_chk" /><label>Força</label><input type="number" name="save_forca" /></div>
-                    <div class="save-item"><input type="checkbox" name="save_destreza_chk" /><label>Destreza</label><input type="number" name="save_destreza" /></div>
-                    <div class="save-item"><input type="checkbox" name="save_constituicao_chk" /><label>Constituição</label><input type="number" name="save_constituicao" /></div>
-                    <div class="save-item"><input type="checkbox" name="save_inteligencia_chk" /><label>Inteligência</label><input type="number" name="save_inteligencia" /></div>
-                    <div class="save-item"><input type="checkbox" name="save_sabedoria_chk" /><label>Sabedoria</label><input type="number" name="save_sabedoria" /></div>
-                    <div class="save-item"><input type="checkbox" name="save_carisma_chk" /><label>Carisma</label><input type="number" name="save_carisma" /></div>
+                  <legend>Testes de Resistência</legend>
+                  <div class="save-item"><input type="checkbox" name="save_forca_chk" /><label>Força</label><input type="number" name="save_forca" /></div>
+                  <div class="save-item"><input type="checkbox" name="save_destreza_chk" /><label>Destreza</label><input type="number" name="save_destreza" /></div>
+                  <div class="save-item"><input type="checkbox" name="save_constituicao_chk" /><label>Constituição</label><input type="number" name="save_constituicao" /></div>
+                  <div class="save-item"><input type="checkbox" name="save_inteligencia_chk" /><label>Inteligência</label><input type="number" name="save_inteligencia" /></div>
+                  <div class="save-item"><input type="checkbox" name="save_sabedoria_chk" /><label>Sabedoria</label><input type="number" name="save_sabedoria" /></div>
+                  <div class="save-item"><input type="checkbox" name="save_carisma_chk" /><label>Carisma</label><input type="number" name="save_carisma" /></div>
                 </fieldset>
             
                 
                 <fieldset class="skills">
-                    <legend>Perícias</legend>
+                  <legend>Perícias</legend>
                   <div class="skill-item"><input type="checkbox" name="sk_adestrar_animais_chk" /><label>Adestrar Animais</label><input type="number" name="sk_adestrar_animais" /></div>
                   <!-- Criar mais dps -->
                 </fieldset>
