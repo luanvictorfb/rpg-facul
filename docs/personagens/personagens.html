@@ -108,15 +108,17 @@
                 <fieldset class="spells">
                   <h2>Magias</h2>
                   <div class="spell">
-                    <label>Nome da Magia: <input type="text" name="spell_name_1" /></label>
-                    <label>Usos Restantes: <input type="number" name="spell_uses_1" min="0" /></label>
-                    <label>Descrição:</label>
-                    <textarea name="spell_desc_1" rows="3"></textarea>
+                    <div class="input-spells">
+                      <label>Nome da Magia: <input type="text" name="spell_name_1" /></label>
+                      <label>Usos Restantes: <input type="number" name="spell_uses_1" min="0" /></label>
+                      <label>Descrição:</label>
+                      <textarea name="spell_desc_1" rows="3"></textarea>
+                    </div>
                   </div>
                   <!-- Clone .spell para múltiplas magias -->
                 </fieldset>
             
-                <button type="submit">Salvar Ficha</button>
+                <button type="submit" class="submit">Salvar Ficha</button>
               </form>
         </div>
     </main>
