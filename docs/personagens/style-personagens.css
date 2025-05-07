@@ -132,15 +132,15 @@ form fieldset {
 .main-input {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
 }
 
 .attributes-info {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,100px);
 }
 .input-hp{
     width: 20%;
@@ -148,8 +148,7 @@ form fieldset {
 .bonus-input {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .testes-input{
@@ -207,6 +206,13 @@ button.submit{
     background-color: #333011;
     border: 2px solid black;
     color: #fff;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+button.submit:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #000;
 }
 footer{
     margin-top: 10px;
