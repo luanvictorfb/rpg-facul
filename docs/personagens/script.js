@@ -1,3 +1,25 @@
+let forca = document.querySelector('.forca');
+let destreza = document.querySelector('.destreza');
+let constituicao = document.querySelector('.constituicao');
+let inteligencia = document.querySelector('.inteligencia');
+let sabedoria = document.querySelector('.sabedoria');
+
+
+((atributo - 10)/2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(this);
@@ -6,18 +28,14 @@ document.querySelector('form').addEventListener('submit', function(event) {
       obj[key] = value;
     });
 
-    // 2. Da esquerda para a direita: converte para JSON, cria um Blob a partir da string JSON, cria uma URL para esse Blob
-    //O "null, 2" é para identar o json criado
     const url = URL.createObjectURL(new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' }));
-
-    // 3. Cria dinamicamente um link <a> com download
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'ficha.json';  // nome do arquivo que será baixado
-    document.body.appendChild(a);     // precisa estar no DOM para funcionar no Firefox
-    a.click();                        // dispara o download
-    document.body.removeChild(a);     // limpa o elemento
-    URL.revokeObjectURL(url);         // libera memória
+    a.download = 'ficha.json';
+    document.body.appendChild(a);
+    a.click(); 
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 });
 
 const navbarToggle = document.querySelector('.navbar-toggle');

@@ -11,9 +11,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    font-family: 'Poppins', serif;
+    font-family: 'Poppins', 'Arial', serif;
 }
 
 body {
@@ -154,8 +153,8 @@ form fieldset {
 .testes-input{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,120px);
 }
 
 
