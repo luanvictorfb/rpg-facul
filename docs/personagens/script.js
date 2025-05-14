@@ -23,18 +23,18 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function atualizaTestes() {
-    for (const chave in atributos) {
-      const valor = parseInt(atributos[chave].value);
+    for (const i in atributos) {
+      const valor = parseInt(atributos[i].value);
       if (!isNaN(valor)) {
-        testes[chave].value = calculaModificador(valor);
+        testes[i].value = calculaModificador(valor);
       } else {
-        testes[chave].value = '';
+        testes[i].value = '';
       }
     }
   }
 
-  for (const chave in atributos) {
-    atributos[chave].addEventListener('input', atualizaTestes);
+  for (const i in atributos) {
+    atributos[i].addEventListener('input', atualizaTestes);
   }
 
   atualizaTestes();
