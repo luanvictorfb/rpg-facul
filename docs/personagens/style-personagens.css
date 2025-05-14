@@ -170,6 +170,10 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2,120px);
 }
+.skills-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 
 
 .save-item{
