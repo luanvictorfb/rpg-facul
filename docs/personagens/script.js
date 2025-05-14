@@ -1,24 +1,44 @@
-let forca = document.querySelector('.forca');
-let destreza = document.querySelector('.destreza');
-let constituicao = document.querySelector('.constituicao');
-let inteligencia = document.querySelector('.inteligencia');
-let sabedoria = document.querySelector('.sabedoria');
+window.addEventListener('DOMContentLoaded', () => {
 
+  const atributos = {
+    forca: document.querySelector('input[name="forca"]'),
+    destreza: document.querySelector('input[name="destreza"]'),
+    constituicao: document.querySelector('input[name="constituicao"]'),
+    inteligencia: document.querySelector('input[name="inteligencia"]'),
+    sabedoria: document.querySelector('input[name="sabedoria"]'),
+    carisma: document.querySelector('input[name="carisma"]'),
+  };
 
-((atributo - 10)/2)
+  const testes = {
+    forca: document.querySelector('input[name="save_forca"]'),
+    destreza: document.querySelector('input[name="save_destreza"]'),
+    constituicao: document.querySelector('input[name="save_constituicao"]'),
+    inteligencia: document.querySelector('input[name="save_inteligencia"]'),
+    sabedoria: document.querySelector('input[name="save_sabedoria"]'),
+    carisma: document.querySelector('input[name="save_carisma"]'),
+  };
 
+  function calculaModificador(valor) {
+    return Math.floor((valor - 10) / 2);
+  }
 
+  function atualizaTestes() {
+    for (const chave in atributos) {
+      const valor = parseInt(atributos[chave].value);
+      if (!isNaN(valor)) {
+        testes[chave].value = calculaModificador(valor);
+      } else {
+        testes[chave].value = '';
+      }
+    }
+  }
 
+  for (const chave in atributos) {
+    atributos[chave].addEventListener('input', atualizaTestes);
+  }
 
-
-
-
-
-
-
-
-
-
+  atualizaTestes();
+});
 
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();

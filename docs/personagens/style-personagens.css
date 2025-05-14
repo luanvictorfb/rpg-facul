@@ -97,6 +97,9 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+
+
+
 main h1 {
     font-size: 2.5em;
     color: var(--cor4);
@@ -128,6 +131,11 @@ form fieldset {
     gap: 10px;
 }
 
+h2{
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
 .main-input {
     width: 100%;
     display: grid;
@@ -150,13 +158,23 @@ form fieldset {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.saving-throws h3{
+    
+    margin-bottom: 20px;
+}
 .testes-input{
+    gap: 20px;
+    text-align: center;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2,120px);
 }
 
+
+.save-item{
+    text-align: center;
+}
 
 label {
     font-weight: bold;

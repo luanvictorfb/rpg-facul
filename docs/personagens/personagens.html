@@ -1,130 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style-personagens.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style-personagens.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="/homepage/homepage.html" class="navbar-logo">LOGO</a>
-                <button class="navbar-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="navbar-menu">
-                    <li><a href="#">Personagens</a></li>
-                    <li><a href="#">Mobs</a></li>
-                    <li><a href="#">Sobre</a></li>
-                </ul>   
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/homepage/homepage.html" class="navbar-logo">LOGO</a>
+        <button class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#">Personagens</a></li>
+          <li><a href="#">Mobs</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Ficha de personagem</h1>
+    <div class="container-form">
+      <form>
+        <fieldset class="main-info">
+          <h2>Informações Gerais</h2>
+          <div class="main-input">
+            <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
+            <label>Classe (Nível): <input type="text" name="classe_nivel" /></label>
+            <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
+            <label>Raça: <input type="text" name="raca" /> </label>
+            <label>Antecedente: <input type="text" name="antecedente" /></label>
+            <label>Alinhamento: <input type="text" name="alinhamento" /></label>
+            <label>XP: <input type="number" name="xp" min="0" /></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="attributes">
+          <h2>Atributos</h2>
+          <div class="attributes-info">
+            <label>Força: <input type="number" name="forca" min="0" class="forca" /></label>
+            <label>Destreza: <input type="number" name="destreza" min="0" /></label>
+            <label>Constituição: <input type="number" name="constituicao" min="0" /></label>
+            <label>Inteligência: <input type="number" name="inteligencia" min="0" /></label>
+            <label>Sabedoria: <input type="number" name="sabedoria" min="0" /></label>
+            <label>Carisma: <input type="number" name="carisma" min="0" /></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="bonus-state">
+          <h2>Bônus & Estado</h2>
+          <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp" /> / <input
+              type="number" name="hp_maximo" placeholder="Máximo" class="input-hp" /></label>
+          <div class="bonus-input">
+            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" /></label>
+            <label>Iniciativa: <input type="number" name="iniciativa" /></label>
+            <label>Deslocamento: <input type="text" name="deslocamento" /></label>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="saving-throws">
+          <h2>Testes de Resistência</h2>
+          <h3>Habilite qual teste você deseja</h3>
+          <div class="testes-input">
+            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number" name="save_forca" /></label>
+            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number" name="save_destreza" /></label>
+            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number" name="save_constituicao" /></label>
+            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number" name="save_inteligencia" /></label>
+            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number" name="save_sabedoria" /></label>
+            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number" name="save_carisma" /></label>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="skills">
+          <h2>Perícias</h2>
+          <div class="skill-item"><input type="checkbox" name="sk_adestrar_animais_chk" /><label>Adestrar
+              Animais</label><input type="number" name="sk_adestrar_animais" /></div>
+          <!-- Criar mais dps -->
+        </fieldset>
+
+        <fieldset class="proficiencies">
+          <h2>Outras Proficiências & Idiomas</h2>
+          <textarea name="outras_proficiencias" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <h2>Equipamentos</h2>
+          <textarea name="equipamentos" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset class="large-section">
+          <h2>Características & Talentos</h2>
+          <textarea name="caracteristicas" style="width:100%; height:100%;"></textarea>
+        </fieldset>
+
+        <fieldset class="large-section">
+          <h2>Ataques & Conjuração</h2>
+          <textarea name="ataques" style="width:100%; height:100%;"></textarea>
+        </fieldset>
+
+        <fieldset class="spells">
+          <h2 class=>Magias</h2>
+          <div class="spell">
+            <div class="input-spells">
+              <label>Nome da Magia: <input type="text" name="spell_name_1" /></label>
+              <label>Usos Restantes: <input type="number" name="spell_uses_1" min="0" /></label>
+              <label>Descrição:</label>
+              <textarea name="spell_desc_1" rows="3"></textarea>
             </div>
-        </nav>
-    </header>
-    <main>
-        <h1>Ficha de personagem</h1>
-        <div class="container-form">
-            <form>
-                <fieldset class="main-info">
-                  <h2>Informações Gerais</h2>
-                  <div class="main-input">
-                    <label>Nome do Personagem: <input type="text" name="nome_personagem"/></label>
-                    <label>Classe (Nível): <input type="text" name="classe_nivel" /></label>
-                    <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
-                    <label>Raça: <input type="text" name="raca"/> </label>
-                    <label>Antecedente: <input type="text" name="antecedente" /></label>
-                    <label>Alinhamento: <input type="text" name="alinhamento" /></label>
-                    <label>XP: <input type="number" name="xp" min="0" /></label>
-                  </div>
-                </fieldset>
-            
-                <fieldset class="attributes">
-                  <h2>Atributos</h2>
-                  <div class="attributes-info">
-                    <label>Força: <input type="number" name="forca" min="0" class="forca"/></label>
-                    <label>Destreza: <input type="number" name="destreza" min="0" /></label>
-                    <label>Constituição: <input type="number" name="constituicao" min="0" /></label>
-                    <label>Inteligência: <input type="number" name="inteligencia" min="0" /></label>
-                    <label>Sabedoria: <input type="number" name="sabedoria" min="0" /></label>
-                    <label>Carisma: <input type="number" name="carisma" min="0" /></label>
-                  </div>
-                </fieldset>
-            
-                <fieldset class="bonus-state">
-                  <h2>Bônus & Estado</h2>
-                  <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp"/> / <input type="number" name="hp_maximo" placeholder="Máximo" class="input-hp"/></label>
-                  <div class="bonus-input">
-                    <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" /></label>
-                    <label>Iniciativa: <input type="number" name="iniciativa" /></label>
-                    <label>Deslocamento: <input type="text" name="deslocamento" /></label>
-                  </div>
-                </fieldset>
-            
-                
-                <fieldset class="saving-throws">
-                  <h2>Testes de Resistência</h2>
-                  <div class="testes-input">
-                    <div class="save-item"><input type="checkbox" name="save_forca_chk" /><label>Força<input type="number" name="save_forca" /></label></div>
-                    <div class="save-item"><input type="checkbox" name="save_destreza_chk" /><label>Destreza<input type="number" name="save_destreza" /></div></label>
-                    <div class="save-item"><input type="checkbox" name="save_constituicao_chk" /><label>Constituição<input type="number" name="save_constituicao" /></label></div>
-                    <div class="save-item"><input type="checkbox" name="save_inteligencia_chk" /><label>Inteligência<input type="number" name="save_inteligencia" /></label></div>
-                    <div class="save-item"><input type="checkbox" name="save_sabedoria_chk" /><label>Sabedoria<input type="number" name="save_sabedoria" /></label></div>
-                    <div class="save-item"><input type="checkbox" name="save_carisma_chk" /><label>Carisma<input type="number" name="save_carisma" /></label></div>
-                  </div>
-                </fieldset>
-            
-                
-                <fieldset class="skills">
-                  <h2>Perícias</h2>
-                  <div class="skill-item"><input type="checkbox" name="sk_adestrar_animais_chk" /><label>Adestrar Animais</label><input type="number" name="sk_adestrar_animais" /></div>
-                  <!-- Criar mais dps -->
-                </fieldset>
-            
-                <fieldset class="proficiencies">
-                  <h2>Outras Proficiências & Idiomas</h2>
-                  <textarea name="outras_proficiencias" rows="4"></textarea>
-                </fieldset>
-            
-                <fieldset>
-                  <h2>Equipamentos</h2>
-                  <textarea name="equipamentos" rows="4"></textarea>
-                </fieldset>
-            
-                <fieldset class="large-section">
-                  <h2>Características & Talentos</h2>
-                  <textarea name="caracteristicas" style="width:100%; height:100%;"></textarea>
-                </fieldset>
-            
-                <fieldset class="large-section">
-                  <h2>Ataques & Conjuração</h2>
-                  <textarea name="ataques" style="width:100%; height:100%;"></textarea>
-                </fieldset>
-            
-                <fieldset class="spells">
-                  <h2>Magias</h2>
-                  <div class="spell">
-                    <div class="input-spells">
-                      <label>Nome da Magia: <input type="text" name="spell_name_1" /></label>
-                      <label>Usos Restantes: <input type="number" name="spell_uses_1" min="0" /></label>
-                      <label>Descrição:</label>
-                      <textarea name="spell_desc_1" rows="3"></textarea>
-                    </div>
-                  </div>
-                </fieldset>
-            
-                <button type="submit" class="submit">Salvar Ficha</button>
-              </form>
-        </div>
-    </main>
-    <footer>
-      <p>Desenvolvido por Luan,Agnaldo,Nathan,João Victor e Fillipe
-      </p>
-    </footer>
+          </div>
+        </fieldset>
+        <button type="submit" class="submit">Salvar Ficha</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>Desenvolvido por Luan,Agnaldo,Nathan,João Victor e Fillipe
+    </p>
+  </footer>
 </body>
 <script src="script.js"></script>
 
