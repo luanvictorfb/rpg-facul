@@ -38,13 +38,13 @@
           <h2>Informações Gerais</h2>
           <div class="main-input">
             <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
+            <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
             <label>Classe: <input type="text" name="nome_classe" /></label>
             <label>Nível: <input type="text" name="nome_nivel" /></label>
-            <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
+            <label>XP: <input type="number" name="xp" min="0" /></label>
             <label>Raça: <input type="text" name="raca" /> </label>
             <label>Antecedente: <input type="text" name="antecedente" /></label>
             <label>Alinhamento: <input type="text" name="alinhamento" /></label>
-            <label>XP: <input type="number" name="xp" min="0" /></label>
           </div>
         </fieldset>
 
@@ -65,7 +65,7 @@
           <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp" /> / <input
               type="number" name="hp_maximo" placeholder="Máximo" class="input-hp" /></label>
           <div class="bonus-input">
-            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" /></label>
+            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" max="350000"/></label>
             <label>Iniciativa: <input type="number" name="iniciativa" /></label>
             <label>Deslocamento: <input type="text" name="deslocamento" /></label>
           </div>

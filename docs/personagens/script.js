@@ -1,5 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+  const infoGerais = {
+    classe: document.querySelector('input[nome=nome_classe]'),
+    nivel: document.querySelector('input[name="nome_nivel"]'),
+    xp: document.querySelector('input[name="xp"]')
+  }
+
+  const bonusState = {
+    proficiencia: document.querySelector('input[name="bonus_proficiencia"]'),
+
+  }
+
   const atributos = {
     forca: document.querySelector('input[name="forca"]'),
     destreza: document.querySelector('input[name="destreza"]'),
@@ -17,6 +28,30 @@ window.addEventListener('DOMContentLoaded', () => {
     sabedoria: document.querySelector('input[name="save_sabedoria"]'),
     carisma: document.querySelector('input[name="save_carisma"]'),
   };
+
+  function modifAtri(){
+    if(infoGerais.xp.value >= 0 || infoGerais.xp.value <= 299){
+      bonusState.proficiencia.value = 2;
+      infoGerais.nivel.value = 2;
+    } else if (infoGerais.xp.value >= 300 || infoGerais.xp.value <= 899){
+      bonusState.proficiencia.value = 2;
+      infoGerais.nivel.value = 3;
+    } else if (infoGerais.xp.value >= 900 || infoGerais.xp.value <= 2699){
+      bonusState.proficiencia.value = 2;
+      infoGerais.nivel.value = 4;
+    } else if (infoGerais.xp.value >= 2700 || infoGerais.xp.value <= 6499){
+      bonusState.proficiencia.value = 3;
+      infoGerais.nivel.value = 5;
+    } else if (infoGerais.xp.value >= 6500 || infoGerais.xp.value <= 13999){
+      bonusState.proficiencia.value = 3;
+      infoGerais.nivel.value = 6;
+    } else if (infoGerais.xp.value >= 14000 || infoGerais.xp.value <= 22999){
+      bonusState.proficiencia.value = 2;
+      infoGerais.nivel.value = 3;
+    } else if (infoGerais.xp.value >= 23000 || infoGerais.xp.value <= 33999){
+
+    }
+  }
 
   function calculaModificador(valor) {
     return Math.floor((valor - 10) / 2);
