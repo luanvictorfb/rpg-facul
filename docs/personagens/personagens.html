@@ -39,13 +39,23 @@
           <div class="main-input">
             <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
             <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
-            <label>Classe: <input type="text" name="nome_classe" /></label>
-            <label>Nível: <input type="text" name="nome_nivel" /></label>
             <label>XP: <input type="number" name="xp" min="0" /></label>
             <label>Raça: <input type="text" name="raca" /> </label>
             <label>Antecedente: <input type="text" name="antecedente" /></label>
             <label>Alinhamento: <input type="text" name="alinhamento" /></label>
           </div>
+        </fieldset>
+        
+        <fieldset class="classes-container">
+          <h2>Classes & Níveis</h2>
+          <div class="class">
+            <div class="classe-nivel">
+              <label>Classe: <input type="text" name="classe_1" /></label>
+              <label>Nível: <input type="number" name="nivel_1" min="1" /></label>
+            </div>
+          </div>
+          <button type="button" class="addClasse">+1 Classe</button>
+          <button type="button" class="removeClasse">Remover Última Classe</button>
         </fieldset>
 
         <fieldset class="attributes">
@@ -65,7 +75,7 @@
           <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp" /> / <input
               type="number" name="hp_maximo" placeholder="Máximo" class="input-hp" /></label>
           <div class="bonus-input">
-            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" max="350000"/></label>
+            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" max="350000" /></label>
             <label>Iniciativa: <input type="number" name="iniciativa" /></label>
             <label>Deslocamento: <input type="text" name="deslocamento" /></label>
           </div>
@@ -73,38 +83,61 @@
 
         <fieldset class="saving-throws">
           <h2>Testes de Resistência</h2>
-          <h3>Habilite qual teste você deseja</h3>
           <div class="testes-input">
-            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number" name="save_forca" /></label>
-            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number" name="save_destreza" /></label>
-            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number" name="save_constituicao" /></label>
-            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number" name="save_inteligencia" /></label>
-            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number" name="save_sabedoria" /></label>
-            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number" name="save_carisma" /></label>
+            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number"
+                name="save_forca" /></label>
+            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number"
+                name="save_destreza" /></label>
+            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number"
+                name="save_constituicao" /></label>
+            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number"
+                name="save_inteligencia" /></label>
+            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number"
+                name="save_sabedoria" /></label>
+            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number"
+                name="save_carisma" /></label>
           </div>
         </fieldset>
 
         <fieldset class="skills">
           <h2>Perícias</h2>
           <div class="skills-info">
-            <div class="skill-item"><input type="checkbox" name=""/><label>Acrobracia (Des)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Arcanismo (Int)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Atletismo (For)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Atuação (Car)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Enganação (Car)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Furtividade (Des)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>História (Int)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Intimidação (Car)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Intuição (Sab)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Investigação (Int)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Adestramento (Sab)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Medicina (Sab)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Natureza (Int)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Percepção (Sab)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Persuasão (Car)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Pretidigitação (Des)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Religião (Int)</label><input type="number" name="" /></div>
-            <div class="skill-item"><input type="checkbox" name=""/><label>Sobrevivência (Sab)</label><input type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Acrobracia (Des)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Arcanismo (Int)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Atletismo (For)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Atuação (Car)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Enganação (Car)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Furtividade (Des)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> História (Int)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Intimidação (Car)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Intuição (Sab)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Investigação (Int)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Adestramento (Sab)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Medicina (Sab)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Natureza (Int)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Percepção (Sab)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Persuasão (Car)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Pretidigitação (Des)</label><input
+                type="number" name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Religião (Int)</label><input type="number"
+                name="" /></div>
+            <div class="skill-item"><input type="checkbox" name="" /><label> Sobrevivência (Sab)</label><input
+                type="number" name="" /></div>
           </div>
         </fieldset>
 
@@ -138,6 +171,7 @@
               <textarea name="spell_desc_1" rows="3"></textarea>
             </div>
           </div>
+          <button class="addSpell">+1 Magia</button> <button class="removeSpell">Remover ultima magia</button>
         </fieldset>
         <button type="submit" class="submit">Salvar Ficha</button>
       </form>
