@@ -142,16 +142,27 @@ h2{
 .attributes-info {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2,100px);
+    grid-template-columns: repeat(2 , 1fr);
 }
+
 .input-hp{
     width: 20%;
 }
+
+input::placeholder{
+    text-align: center;
+}
+
 .bonus-input {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.armadura-input{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 50%;
 }
 
 .saving-throws h3{
@@ -167,10 +178,15 @@ h2{
 }
 
 .save-item{
-    text-align: center;
+    text-align: center; 
 }
 
+.inputs-attributes{
+    display: flex;
+    flex-flow: row nowrap;
+}
 label {
+    text-align: center;
     font-weight: bold;
     color: var(--cor2);
 }
@@ -189,6 +205,7 @@ input[type="text"],input[type="number"]{
 
 input[type="text"]:focus,input[type="number"]:focus {
     box-shadow: 5.5px 7px 0 black;
+    text-align: center;
 }
 
 fieldset .bonus-state input::placeholder {
@@ -196,6 +213,7 @@ fieldset .bonus-state input::placeholder {
 }
 textarea{
     width: 100%;
+    max-height: 1000px;
     height: 150px;
     padding: 5px;
 }
@@ -211,7 +229,9 @@ textarea{
     width: 100%;
     flex-flow: column nowrap;
 }
-
+.classe-nivel{
+    transition: all 0.5s ease;
+}
 
 .input-spells textarea{
     width: 100%;
