@@ -13,6 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'Arial', serif;
+    text-align: center;
 }
 
 body {
@@ -160,8 +161,8 @@ input::placeholder{
 }
 
 .armadura-input{
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 50%;
 }
 
