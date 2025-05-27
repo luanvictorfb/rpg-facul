@@ -16,7 +16,7 @@ const testes = {
   carisma: document.querySelector('input[name="save_carisma"]'),
 };
 
-const proficiencia = document.querySelector('input[name="bonus_proficiencia"]');
+const niveis = document.querySelectorAll('input[name^="nivel_"]');
 const bonus = document.querySelector('input[name="bonusArmadura"]');
 const armadura = document.querySelector('input[name="armadura"]');
 let spellCount = 1;
@@ -128,39 +128,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
   URL.revokeObjectURL(url);
 });
 
-document.getElementById('meuForm2').addEventListener('submit', function (event) {
-  event.preventDefault();
 
-  const input = document.getElementById('arquivo');
-  const file = input.files[0];
-
-  if (!file) {
-    alert('Selecione um arquivo JSON primeiro.');
-    return;
-  }
-
-  const reader = new FileReader();
-
-  reader.onload = function (e) {
-    try {
-      const jsonObject = JSON.parse(e.target.result);
-      console.log("Objeto carregado do JSON:", jsonObject);
-
-      // Preencher os campos do formulário "meuForm"
-      const form = document.getElementById('meuForm');
-      for (const key in jsonObject) {
-        const input = form.elements.namedItem(key);
-        if (input) {
-          input.value = jsonObject[key];
-        }
-      }
-    } catch (err) {
-      console.error("Erro ao fazer parse do JSON:", err);
-    }
-  };
-
-  reader.readAsText(file);
-});
 
 document.querySelector('.buttonArma').addEventListener('click', function (e) {
   e.preventDefault();
@@ -170,7 +138,7 @@ document.querySelector('.buttonArma').addEventListener('click', function (e) {
 });
 
 function calcularNivelTotal() {
-  const niveis = document.querySelectorAll('input[name^="nivel_"]');
+  
   let total = 0;
   niveis.forEach(nivelInput => {
     const val = parseInt(nivelInput.value);
@@ -198,7 +166,7 @@ function modifAtri() {
 }
 
 window.addEventListener('DOMContentLoaded', (e) => {
-
+  
 
   function atualizaTestes() {
     for (const i in atributos) {
