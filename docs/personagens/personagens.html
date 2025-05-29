@@ -60,18 +60,19 @@
         <fieldset class="attributes">
           <h2>Atributos</h2>
           <div class="attributes-info">
-            <label> Força / Modificador: <div class="inputs-attributes"><input type="number" name="forca" min="0"
-                  class="forca" /><input type="number" name="modificador_forca" min="0" disabled=""></div></label>
-            <label>Destreza / Modificador: <div class="inputs-attributes"><input type="number" name="destreza"
-                  min="0" /><input type="number" name="modificador_destreza" min="0" disabled=""></div></label>
-            <label>Constituição / Modificador: <div class="inputs-attributes"><input type="number" name="constituicao"
-                  min="0" /><input type="number" name="modificador_constituicao" min="0" disabled=""></div></label>
-            <label>Inteligência / Modificador: <div class="inputs-attributes"><input type="number" name="inteligencia"
-                  min="0" /><input type="number" name="modificador_inteligencia" min="0" disabled=""></div></label>
-            <label>Sabedoria / Modificador: <div class="inputs-attributes"><input type="number" name="sabedoria"
-                  min="0" /><input type="number" name="modificador_sabedoria" min="0" disabled=""></div></label>
-            <label>Carisma / Modificador: <div class="inputs-attributes"><input type="number" name="carisma"
-                  min="0" /><input type="number" name="modificador_carisma" min="0" disabled=""></div></label>
+
+            <label>Força / Modificador: <div class="inputs-attributes"><input type="number" name="forca" min="0" class="forca" /><input type="number" name="modificador_forca" min="0" disabled=""></div></label>
+
+            <label>Destreza / Modificador: <div class="inputs-attributes"><input type="number" name="destreza" min="0" /><input type="number" name="modificador_destreza" min="0" disabled=""></div></label>
+
+            <label>Constituição / Modificador: <div class="inputs-attributes"><input type="number" name="constituicao" min="0" /><input type="number" name="modificador_constituicao" min="0" disabled=""></div></label>
+
+            <label>Inteligência / Modificador: <div class="inputs-attributes"><input type="number" name="inteligencia" min="0" /><input type="number" name="modificador_inteligencia" min="0" disabled=""></div></label>
+
+            <label>Sabedoria / Modificador: <div class="inputs-attributes"><input type="number" name="sabedoria" min="0" /><input type="number" name="modificador_sabedoria" min="0" disabled=""></div></label>
+
+            <label>Carisma / Modificador: <div class="inputs-attributes"><input type="number" name="carisma" min="0" /><input type="number" name="modificador_carisma" min="0" disabled=""></div></label>
+
           </div>
         </fieldset>
 
@@ -80,7 +81,7 @@
           <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp" /> / <input
               type="number" name="hp_maximo" placeholder="Máximo" class="input-hp" /></label>
           <div class="bonus-input">
-            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" min="0" max="350000" /></label>
+            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" readonly /></label>
             <label>Iniciativa:<input type="number" name="iniciativa" /></label>
             <label>Deslocamento:<input type="text" name="deslocamento" /></label>
           </div>
@@ -94,18 +95,19 @@
         <fieldset class="saving-throws">
           <h2>Testes de Resistência</h2>
           <div class="testes-input">
-            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number"
-                name="save_forca" /></label>
-            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number" name="save_destreza"
-                disabled="" /></label>
-            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number"
-                name="save_constituicao" /></label>
-            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number"
-                name="save_inteligencia" /></label>
-            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number"
-                name="save_sabedoria" /></label>
-            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number"
-                name="save_carisma" /></label>
+
+            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number" name="save_forca" value="0"/></label>
+
+            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number" name="save_destreza" disabled="" value="0" /></label>
+
+            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number" name="save_constituicao" value="0"/></label>
+
+            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number" name="save_inteligencia" value="0"/></label>
+
+            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number" name="save_sabedoria" value="0"/></label>
+            
+            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number" name="save_carisma" value="0"/></label>
+
           </div>
         </fieldset>
 
