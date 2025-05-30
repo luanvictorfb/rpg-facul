@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style-personagens.css">
+  <link rel="stylesheet" href="style-mobs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -116,56 +116,46 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
           <span class="bar"></span>
         </button>
         <ul class="navbar-menu">
-          <li><a class="active" href="/docs/personagens/personagens.html">Personagens</a></li>
-          <li><a href="/docs/mobs/mobs.html">Mobs</a></li>
+          <li><a href="/docs/personagens/personagens.html">Personagens</a></li>
+          <li><a class="active" href="/docs/mobs/mobs.html">Mobs</a></li>
           <li><a href="#">Sobre</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <h1>Ficha de personagem</h1>
+    <h1>Ficha de Mobs</h1>
     <div class="container-form">
       <form id="form">
         <fieldset class="main-info">
           <h2>Informações Gerais</h2>
           <div class="main-input">
-            <label>Nome do Personagem: <input type="text" name="nome_personagem" /></label>
-            <label>Nome do Jogador: <input type="text" name="nome_jogador" /></label>
-            <label>XP: <input type="number" name="xp" min="0" /></label>
-            <label>Raça: <input type="text" name="raca" /> </label>
-            <label>Antecedente: <input type="text" name="antecedente" /></label>
-            <label>Alinhamento: <input type="text" name="alinhamento" /></label>
-          </div>
-        </fieldset>
 
-        <fieldset class="classes-container">
-          <h2>Classes & Níveis</h2>
-          <div class="class">
-            <div class="classe-nivel">
-              <label>Classe: <input type="text" name="classe_1" /></label>
-              <label>Nível: <input type="number" name="nivel_1" min="1" /></label>
-            </div>
+            <label>Nome do mob: <input type="text" name="nome_personagem" /></label>
+
+            <label>Alinhamento: <input type="text" name="alinhamento" /></label>
+
+            <label>Nível de desafio: <input type="text" name="nivelDesafio" /> </label>
+
+            <label>XP: <br><input type="number" name="xp" /> </label>
           </div>
-          <button type="button" class="addClasse">+1 Classe</button>
-          <button type="button" class="removeClasse">Remover Última Classe</button>
         </fieldset>
 
         <fieldset class="attributes">
           <h2>Atributos</h2>
           <div class="attributes-info">
 
-            <label>Força / Modificador: <div class="inputs-attributes"><input type="number" name="forca" min="0" class="forca" /><input type="number" name="modificador_forca" min="0" disabled=""></div></label>
+            <label>Força / Modificador: <div class="inputs-attributes"><input type="number" name="forca" min="0" class="forca" /><input type="number" name="modificador_forca" min="0" ></div></label>
 
-            <label>Destreza / Modificador: <div class="inputs-attributes"><input type="number" name="destreza" min="0" /><input type="number" name="modificador_destreza" min="0" disabled=""></div></label>
+            <label>Destreza / Modificador: <div class="inputs-attributes"><input type="number" name="destreza" min="0" /><input type="number" name="modificador_destreza" min="0" ></div></label>
 
-            <label>Constituição / Modificador: <div class="inputs-attributes"><input type="number" name="constituicao" min="0" /><input type="number" name="modificador_constituicao" min="0" disabled=""></div></label>
+            <label>Constituição / Modificador: <div class="inputs-attributes"><input type="number" name="constituicao" min="0" /><input type="number" name="modificador_constituicao" min="0" ></div></label>
 
-            <label>Inteligência / Modificador: <div class="inputs-attributes"><input type="number" name="inteligencia" min="0" /><input type="number" name="modificador_inteligencia" min="0" disabled=""></div></label>
+            <label>Inteligência / Modificador: <div class="inputs-attributes"><input type="number" name="inteligencia" min="0" /><input type="number" name="modificador_inteligencia" min="0" ></div></label>
 
-            <label>Sabedoria / Modificador: <div class="inputs-attributes"><input type="number" name="sabedoria" min="0" /><input type="number" name="modificador_sabedoria" min="0" disabled=""></div></label>
+            <label>Sabedoria / Modificador: <div class="inputs-attributes"><input type="number" name="sabedoria" min="0" /><input type="number" name="modificador_sabedoria" min="0" ></div></label>
 
-            <label>Carisma / Modificador: <div class="inputs-attributes"><input type="number" name="carisma" min="0" /><input type="number" name="modificador_carisma" min="0" disabled=""></div></label>
+            <label>Carisma / Modificador: <div class="inputs-attributes"><input type="number" name="carisma" min="0" /><input type="number" name="modificador_carisma" min="0" ></div></label>
 
           </div>
         </fieldset>
@@ -175,7 +165,6 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
           <label>Pontos de Vida: <input type="number" name="hp_atual" placeholder="Atual" class="input-hp" /> / <input
               type="number" name="hp_maximo" placeholder="Máximo" class="input-hp" /></label>
           <div class="bonus-input">
-            <label>Bônus de Proficiência: <input type="number" name="bonus_proficiencia" readonly disabled/></label>
             <label>Iniciativa:<input type="number" name="iniciativa" /></label>
             <label>Deslocamento:<input type="text" name="deslocamento" /></label>
           </div>
@@ -190,17 +179,17 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
           <h2>Testes de Resistência</h2>
           <div class="testes-input">
 
-            <label>Força <input type="checkbox" name="save_forca_chk" /> <input type="number" name="save_forca" value="0" disabled /></label>
+            <label>Força<input type="number" name="save_forca" value="0"/></label>
 
-            <label>Destreza <input type="checkbox" name="save_destreza_chk" /><input type="number" name="save_destreza" disabled value="0" /></label>
+            <label>Destreza<input type="number" name="save_destreza" value="0" /></label>
 
-            <label>Constituição <input type="checkbox" name="save_constituicao_chk" /><input type="number" name="save_constituicao" value="0" disabled /></label>
+            <label>Constituição<input type="number" name="save_constituicao" value="0"/></label>
 
-            <label>Inteligência <input type="checkbox" name="save_inteligencia_chk" /><input type="number" name="save_inteligencia" value="0" disabled /></label>
+            <label>Inteligência<input type="number" name="save_inteligencia" value="0"/></label>
 
-            <label>Sabedoria <input type="checkbox" name="save_sabedoria_chk" /><input type="number" name="save_sabedoria" value="0" disabled /></label>
+            <label>Sabedoria<input type="number" name="save_sabedoria" value="0"/></label>
             
-            <label>Carisma <input type="checkbox" name="save_carisma_chk" /><input type="number" name="save_carisma" value="0" disabled /></label>
+            <label>Carisma<input type="number" name="save_carisma" value="0"/></label>
 
           </div>
         </fieldset>
@@ -209,63 +198,58 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
           <h2>Perícias</h2>
           <div class="skills-info">
 
-            <div class="skill-item"><input type="checkbox" name="pericia_acrobacia_chk" /><label> Acrobacia (Des)</label><input type="number" name="pericia_acrobacia" disabled /></div>
+            <div class="skill-item"><label> Acrobacia (Des)</label><input type="number" name="pericia_acrobacia" /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_arcanismo_chk" /><label> Arcanismo (Int)</label><input type="number" name="pericia_arcanismo" disabled /></div>
+            <div class="skill-item"><label> Arcanismo (Int)</label><input type="number" name="pericia_arcanismo"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_atletismo_chk" /><label> Atletismo (For)</label><input type="number" name="pericia_atletismo" disabled /></div>
+            <div class="skill-item"><label> Atletismo (For)</label><input type="number" name="pericia_atletismo"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_atuacao_chk" /><label> Atuação (Car)</label><input type="number" name="pericia_atuacao" disabled /></div>
+            <div class="skill-item"><label> Atuação (Car)</label><input type="number" name="pericia_atuacao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_enganacao_chk" /><label> Enganação (Car)</label><input type="number" name="pericia_enganacao" disabled /></div>
+            <div class="skill-item"><label> Enganação (Car)</label><input type="number" name="pericia_enganacao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_furtividade_chk" /><label> Furtividade (Des)</label><input type="number" name="pericia_furtividade" disabled /></div>
+            <div class="skill-item"><label> Furtividade (Des)</label><input type="number" name="pericia_furtividade"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_historia_chk" /><label> História (Int)</label><input type="number" name="pericia_historia" disabled /></div>
+            <div class="skill-item"><label> História (Int)</label><input type="number" name="pericia_historia"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_intimidacao_chk" /><label> Intimidação (Car)</label><input type="number" name="pericia_intimidacao" disabled /></div>
+            <div class="skill-item"><label> Intimidação (Car)</label><input type="number" name="pericia_intimidacao" /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_intuicao_chk" /><label> Intuição (Sab)</label><input type="number" name="pericia_intuicao" disabled /></div>
+            <div class="skill-item"><label> Intuição (Sab)</label><input type="number" name="pericia_intuicao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_investigacao_chk" /><label> Investigação (Int)</label><input type="number" name="pericia_investigacao" disabled /></div>
+            <div class="skill-item"><label> Investigação (Int)</label><input type="number" name="pericia_investigacao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_adestramento_chk" /><label> Adestramento (Sab)</label><input type="number" name="pericia_adestramento" disabled /></div>
+            <div class="skill-item"><label> Adestramento (Sab)</label><input type="number" name="pericia_adestramento"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_medicina_chk" /><label> Medicina (Sab)</label><input type="number" name="pericia_medicina" disabled /></div>
+            <div class="skill-item"><label> Medicina (Sab)</label><input type="number" name="pericia_medicina"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_natureza_chk" /><label> Natureza (Int)</label><input type="number" name="pericia_natureza" disabled /></div>
+            <div class="skill-item"><label> Natureza (Int)</label><input type="number" name="pericia_natureza"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_percepcao_chk" /><label> Percepção (Sab)</label><input type="number" name="pericia_percepcao" disabled /></div>
+            <div class="skill-item"><label> Percepção (Sab)</label><input type="number" name="pericia_percepcao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_persuasao_chk" /><label> Persuasão (Car)</label><input type="number" name="pericia_persuasao" disabled /></div>
+            <div class="skill-item"><label> Persuasão (Car)</label><input type="number" name="pericia_persuasao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_prestidigitacao_chk" /><label> Prestidigitação (Des)</label><input type="number" name="pericia_prestidigitacao" disabled /></div>
+            <div class="skill-item"><label> Prestidigitação (Des)</label><input type="number" name="pericia_prestidigitacao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_religiao_chk" /><label> Religião (Int)</label><input type="number" name="pericia_religiao" disabled /></div>
+            <div class="skill-item"><label> Religião (Int)</label><input type="number" name="pericia_religiao"  /></div>
 
-            <div class="skill-item"><input type="checkbox" name="pericia_sobrevivencia_chk" /><label> Sobrevivência (Sab)</label><input type="number" name="pericia_sobrevivencia" disabled /></div>
+            <div class="skill-item"><label> Sobrevivência (Sab)</label><input type="number" name="pericia_sobrevivencia"  /></div>
             
           </div>
         </fieldset>
 
         <fieldset class="proficiencies">
           <h2>Outras Proficiências & Idiomas</h2>
-          <textarea name="outras_proficiencias" rows="4"></textarea>
+          <textarea rows="10" cols="5" name="outras_proficiencias" style="width:100%; height:100%;"></textarea>
         </fieldset>
 
         <fieldset>
           <h2>Equipamentos</h2>
-          <textarea name="equipamentos" rows="4"></textarea>
-        </fieldset>
-
-        <fieldset class="large-section">
-          <h2>Características & Talentos</h2>
-          <textarea name="caracteristicas" style="width:100%; height:100%;"></textarea>
+          <textarea rows="10" cols="5" name="equipamentos" style="width:100%; height:100%;"></textarea>
         </fieldset>
 
         <fieldset class="large-section">
           <h2>Ataques & Conjuração</h2>
-          <textarea name="ataques" style="width:100%; height:100%;"></textarea>
+          <textarea rows="10" cols="5" name="ataques" style="width:100%; height:100%;"></textarea>
         </fieldset>
 
         <fieldset class="spells">
@@ -282,7 +266,7 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
         </fieldset>
         <button type="submit" class="submit">Salvar Ficha</button>
       </form>
-      <form class="form2"><label>Arquivo: <input type="file" name="JaSON" id="arquivo"></label><br>
+      <form class="form2"><label>Arquivo: <input type="file" name="JaSON" id="arquivo"></label>
     <button type="submit">Carregar Arquivo</button></form>
     </div>
   </main>

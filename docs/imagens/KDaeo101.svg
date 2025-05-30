@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style-home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="/docs/homepage/homepage.html" class="navbar-logo"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
 <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)"
-fill="currentColor" stroke="none">
+fill="#000000" stroke="none">
 <path d="M1435 2609 c-122 -80 -298 -130 -465 -132 l-100 -2 0 -115 c0 -410
 87 -678 286 -874 72 -72 204 -163 289 -201 l58 -25 86 46 c113 61 159 93 237
 167 122 114 202 252 249 429 33 128 45 235 45 418 l0 155 -98 2 c-158 3 -340
@@ -110,53 +95,4 @@ c-20 -28 -50 -62 -67 -75 l-31 -24 53 -7 c59 -8 87 6 57 28 -16 11 -15 15 14
 -18 24 c-24 32 -33 61 -19 66 6 2 11 8 11 13 0 5 -34 9 -75 9 -41 0 -75 -3
 -75 -7z"/>
 </g>
-</svg></a>
-                <button class="navbar-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="navbar-menu">
-                    <li><a href="/docs/personagens/personagens.html">Personagens</a></li>
-                    <li><a href="/docs/mobs/mobs.html">Mobs</a></li>
-                    <li><a href="#">Sobre</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="personagens">
-            <div class="txt">
-                <h1>Perfil dos personagens</h1>
-                <p>Crie e acesse informações do seus personagens facilmente, fazendo edição em atributos, ataques e etc.
-                    <br>
-                    Tudo para você se concentrar em oque realmente importa, a diversão! </p>
-            </div>
-            <a href="/docs/personagens/personagens.html"><button>Venha criar seu <br>personagem</button></a>
-        </div>
-        <div class="mobs">
-            <a href="#"><button>Adicione mobs</button></a>
-            <div class="txt">
-                <h1>Mobs</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, possimus, aperiam ab provident
-                    eligendi saepe facere nobis aliquid adipisci, repellat ipsum hic laboriosam assumenda molestiae
-                    dolore ad quis dolor nulla? </p>
-            </div>
-        </div>
-        <div class="configuracoes">
-            <div class="txt">
-                <h1>Configurações</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quos, quisquam rerum voluptates
-                    eos porro vel excepturi eius, aperiam nisi reiciendis iure harum! Repudiandae nobis molestias,
-                    consequatur iure atque qui?</p>
-            </div>
-            <a href="#"><button>Configure!</button></a>
-        </div>
-    </main>
-    <footer>
-        <p></p>
-    </footer>
-</body>
-<script src="navbar.js"></script>
-
-</html>
+</svg>

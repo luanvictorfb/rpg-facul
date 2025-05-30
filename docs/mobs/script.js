@@ -7,8 +7,6 @@ const atributos = {
   carisma: document.querySelector('input[name="carisma"]'),
 };
 
-
-
 const testes = {
   forca: document.querySelector('input[name="save_forca"]'),
   destreza: document.querySelector('input[name="save_destreza"]'),
@@ -46,70 +44,17 @@ const atributosMod = {
 }
 
 
-
-
 const bonus = document.querySelector('input[name="bonusArmadura"]');
 const armadura = document.querySelector('input[name="armadura"]');
 let spellCount = 1;
 const spellContainer = document.querySelector('.spell');
-const classContainer = document.querySelector('.class');
 let xp = document.querySelector('input[name="xp"]');
-let classeCount = 1;
 const classeContainer = document.querySelector('.class');
-const proficiencia = document.querySelector('input[name="bonus_proficiencia"]');
 
-document.querySelector('.addClasse').addEventListener('click', (e) => {
-  e.preventDefault();
-  classeCount++;
-  if (classeCount === 2) {
-    classContainer.style.gridTemplateColumns = '1fr 1fr';
-  } else if (classeCount === 3) {
-    classContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
-  }
-
-  const newClasseDiv = document.createElement('div');
-  newClasseDiv.classList.add('classe-nivel');
-  newClasseDiv.innerHTML = `
-    <label>Classe: <input type="text" name="classe_${classeCount}" /></label>
-    <label>Nível: <input type="number" name="nivel_${classeCount}" min="1" /></label>
-  `;
-
-  classeContainer.appendChild(newClasseDiv);
-  const novoNivelInput = newClasseDiv.querySelector(`input[name="nivel_${classeCount}"]`);
-  novoNivelInput.addEventListener('input', modifAtri);
-  modifAtri();
-});
-
-document.querySelector('.removeClasse').addEventListener('click', (e) => {
-  e.preventDefault();
-  const allClasseDivs = classeContainer.querySelectorAll('.classe-nivel');
-
-  if (classeCount > 1) {
-    allClasseDivs[allClasseDivs.length - 1].remove();
-    classeCount--;
-
-    if (classeCount === 1) {
-      classContainer.style.gridTemplateColumns = '1fr';
-    } else if (classeCount === 2) {
-      classContainer.style.gridTemplateColumns = '1fr 1fr';
-    } else {
-      classContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
-    }
-  } else {
-    alert("Você precisa ter pelo menos uma classe.");
-  }
-});
-
-document.querySelector('.buttonArma').addEventListener('click', function (e) {
-  e.preventDefault();
-  const bonusValor = parseInt(bonus.value) || 0;
-  const destrezaValor = parseInt(atributos.destreza.value) || 0;
-  armadura.value = bonusValor + 10 + calculaModificador(destrezaValor);
-});
 
 document.querySelector('.addSpell').addEventListener('click', (e) => {
   e.preventDefault();
-  spellCount++;
+  spellCount++
   const newDiv = document.createElement('div');
   newDiv.classList.add('input-spells');
   if (spellCount === 2) {
@@ -159,9 +104,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
     obj[key] = value;
   });
 
-  console.log(obj);
-  obj.spellCount = spellCount;
-
   const url = URL.createObjectURL(new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' }));
   const a = document.createElement('a');
   a.href = url;
@@ -188,10 +130,6 @@ document.querySelector('.form2').addEventListener('submit', function (event) {
     try {
       const jsonObject = JSON.parse(e.target.result);
       console.log("Objeto carregado do JSON:", jsonObject);
-
-      for (let i = 2; jsonObject[`classe_${i}`]; i++) {
-        document.querySelector('.addClasse').click();
-      }
 
       for (let i = 2; jsonObject[`spell_name_${i}`]; i++) {
         document.querySelector('.addSpell').click();
@@ -235,114 +173,13 @@ document.querySelector('.form2').addEventListener('submit', function (event) {
   reader.readAsText(file);
 });
 
-const pericia = {
-  acrobacia: 'destreza',
-  arcanismo: 'inteligencia',
-  atletismo: 'forca',
-  atuacao: 'carisma',
-  enganacao: 'carisma',
-  furtividade: 'destreza',
-  historia: 'inteligencia',
-  intuicao: 'sabedoria',
-  intimidacao: 'carisma',
-  investigacao: 'inteligencia',
-  adestramento: 'sabedoria',
-  medicina: 'sabedoria',
-  natureza: 'inteligencia',
-  percepcao: 'sabedoria',
-  persuasao: 'carisma',
-  prestidigitacao: 'destreza',
-  religiao: 'inteligencia',
-  sobrevivencia: 'sabedoria'
-}
-
-const periciaInputs = {};
-const periciaCheckboxes = {};
-
-for (const nome in pericia) {
-  periciaInputs[nome] = document.querySelector(`input[name="pericia_${nome}"]`);
-  periciaCheckboxes[nome] = document.querySelector(`input[name="pericia_${nome}_chk"]`);
-}
-
-
-function atualizarPericia() {
-  for (const nome in pericia) {
-    const atributoBase = pericia[nome];
-    const mod = parseInt(atributosMod[mapModKeys[atributoBase]].value) || 0;
-    const profBonus = parseInt(proficiencia.value) || 0;
-    const temProficiencia = periciaCheckboxes[nome]?.checked;
-
-    const total = temProficiencia ? mod + profBonus : mod;
-    periciaInputs[nome].value = total;
-  }
-}
-
-for (const nome in periciaCheckboxes) {
-  periciaCheckboxes[nome].addEventListener('change', atualizarPericia);
-}
-for (const nome in periciaInputs) {
-  atributosMod[mapModKeys[pericia[nome]]].addEventListener('input', atualizarPericia);
-}
-proficiencia.addEventListener('input', atualizarPericia);
-
-window.addEventListener('DOMContentLoaded', atualizarPericia);
-
-function atualizarSalvamentos() {
-  for (const chave in atributosMod) {
-    const nome = chave.replace('mod', '').toLowerCase();
-    const mod = parseInt(atributosMod[chave].value) || 0;
-    const profBonus = parseInt(proficiencia.value) || 0;
-    const temProficiencia = checkboxes[nome]?.checked;
-    testes[nome].value = temProficiencia ? mod + profBonus : mod;
-  }
-}
-
-for (const chave in checkboxes) {
-  checkboxes[chave].addEventListener('change', atualizarSalvamentos);
-}
-
-for (const chave in atributosMod) {
-  atributosMod[chave].addEventListener('input', atualizarSalvamentos);
-}
-
-proficiencia.addEventListener('input', atualizarSalvamentos);
-
-window.addEventListener('DOMContentLoaded', atualizarSalvamentos);
-
-
-
-function calcularNivelTotal() {
-  const niveis = document.querySelectorAll('input[name^="nivel_"]');
-  let total = 0;
-  niveis.forEach(i => {
-    const v = parseInt(i.value);
-    if (!isNaN(v)) total += v;
-  });
-  return total;
-}
-
-function modifAtri() {
-  const nivelTotal = calcularNivelTotal();
-  console.log(nivelTotal)
-  if (nivelTotal <= 4) {
-    proficiencia.value = 2;
-  } else if (nivelTotal <= 8) {
-    proficiencia.value = 3;
-  } else if (nivelTotal <= 12) {
-    proficiencia.value = 4;
-  } else if (nivelTotal <= 16) {
-    proficiencia.value = 5;
-  } else {
-    proficiencia.value = 6;
-  }
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('input[name^="nivel_"]').forEach(input => {
-    input.addEventListener('input', modifAtri);
-  });
-  modifAtri();
+document.querySelector('.buttonArma').addEventListener('click', function (e) {
+  e.preventDefault();
+  const bonusValor = parseInt(bonus.value) || 0;
+  const destrezaValor = parseInt(atributos.destreza.value) || 0;
+  armadura.value = bonusValor + 10 + calculaModificador(destrezaValor);
 });
+
 
 window.addEventListener('DOMContentLoaded', (e) => {
 
